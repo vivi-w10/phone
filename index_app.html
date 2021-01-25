@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<title>
+	宁夏疾病预防控制中心
+	</title>
+<meta charset="utf-8">
+<script src="./js/importJs.js"></script>
+<script type="text/javascript">
+importCss(['/mobile/css/swiper.min.css'])
+importJs(['/mobile/js/swiper/swiper.min.js'])
+importJs(parseHTMLJS);
+
+var myApp = angular.module("myApp", ['base','mobileDirective']);
+myApp.controller("myHomeCtrl",['$scope','baseService','$sce','$compile', function(scope,baseService,$sce,$compile) {
+	window.onload = function(){
+		scope.loadIndexHtml();
+	};
+	scope.loadIndexHtml = function(callback){
+		var url = __ctx + "/mobile/home"
+		baseService.get(url).then(function(data){
+			if(data.result){
+				  $(".index-page").html(data.html);
+				  me.parser();
+				  setTimeout(function(){
+					 $compile($(".index-page")[0])(scope);
+					 $.init();
+					 if(callback){
+						callback();
+					 }
+		          },500)
+			  }
+		});
+	}
+}]);
+
+</script>
+</head>
+<body ng-controller="myHomeCtrl" class="page">
+	<div class="content" >
+		<div class="index-page">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "搜索",
+  "pullRefresh": false,
+  "usingComponents": {
+    "m-search": "/components/mehaotian-search-revision/mehaotian-search-revision"
+  }
+}

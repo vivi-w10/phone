@@ -1,0 +1,141 @@
+
+.box {
+	width: 100%;
+	position: relative;
+	border-radius: 30px;
+	overflow: hidden;
+}
+.flex-center {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.flex-center-center {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.fs-24 {
+	font-size: 24rpx;
+}
+.fs-26 {
+	font-size: 26rpx;
+}
+.fs-38 {
+	font-size: 38rpx;
+}
+.container {
+	width: 750rpx;
+	margin: 0 auto;
+	position: relative;
+}
+.percent-box {
+	margin: 30rpx;
+}
+.perocent-position {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 12px;
+}
+.sku-box {
+	background-color: white;
+	padding-bottom: 20rpx;
+	font-size: 28rpx;
+	color: #333333;
+}
+.sku-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 40rpx 0 20rpx;
+}
+.sku-goods-info {
+	margin-left: 20rpx;
+}
+.sku-item {
+	padding: 30rpx 0;
+}
+.sku-name {
+	font-size: 36rpx;
+	border-left: 6px solid #feea49;
+	padding-left: 20px;
+	font-weight: bold;
+	color: #444444;
+}
+.sku-content {
+	border-bottom: 2rpx solid $page-bg-color-grey;
+	padding: 20rpx 0;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	margin: 0 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	text-align: center;
+}
+.sku-content-item {
+	padding: 16rpx 0rpx;
+	border-radius: 6rpx;
+	border: 5rpx solid transparent;
+	margin: 20rpx;
+	width: 42%;
+	background: #f3f3f3;
+	position: relative;
+}
+.confirm-btn {
+	background-color: #fed22b;
+	height: 80rpx;
+	line-height: 80rpx;
+	width: 500rpx;
+	margin: 0 auto;
+	border-radius: 4px;
+	text-align: center;
+	color: #865610;
+}
+.help-position {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.help-content{
+	background: #fff;
+	width: 75%;
+	margin: 0 auto;
+	position: relative;
+}
+.help-content-img{
+	width: 90%;
+	margin: 30rpx 30rpx 0 30rpx;
+}
+.help-content-title{
+	background: #fcce54;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: #444444;
+	font-size: 32rpx;
+}
+.text{
+	padding: 30rpx;
+}
+.help-content-close{
+	position: absolute;
+	right: 20rpx;
+	top: 20rpx;
+}
+

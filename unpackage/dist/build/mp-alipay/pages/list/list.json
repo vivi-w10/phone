@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "分类",
+  "pullRefresh": false,
+  "usingComponents": {
+    "zzx-tabs": "/components/zzx-tabs/zzx-tabs"
+  }
+}

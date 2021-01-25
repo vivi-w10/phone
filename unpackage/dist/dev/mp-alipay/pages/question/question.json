@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "常见问题",
+  "pullRefresh": false,
+  "usingComponents": {
+    "uni-collapse": "/components/uni-collapse/uni-collapse",
+    "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item"
+  }
+}

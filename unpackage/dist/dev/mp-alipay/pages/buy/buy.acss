@@ -1,0 +1,59 @@
+
+.form-box {
+	margin: 30rpx;
+}
+.form-item {
+	margin: 20rpx 0;
+	position: relative;
+}
+.getYzm {
+	position: absolute;
+	right: 50rpx;
+	top: 106rpx;
+	color: #f0ad4e;
+}
+.title {
+	color: #444444;
+	padding: 20rpx;
+}
+.uni-input {
+	background: #f3f3f3;
+	padding: 26rpx;
+	border-radius: 6px;
+	font-size: 28rpx;
+	width: 90%;
+}
+.radio {
+	margin: 0 30rpx;
+}
+.serialnumber {
+	color: #ba871c;
+	text-align: right;
+	line-height: 70rpx;
+	font-size: 28rpx;
+}
+.sumbit {
+	line-height: 80rpx;
+	margin: 40rpx 30rpx;
+	background: #fed22b;
+	color: #9b6d0b;
+	text-align: center;
+	border-radius: 6px;
+}
+.remind {
+	margin: 30rpx;
+	padding: 30rpx;
+	font-size: 28rpx;
+	color: #999;
+	line-height: 60rpx;
+}
+.serialnumber-info {
+	background: #fff;
+	border-radius: 6px;
+	padding: 40rpx;
+	width: 500rpx;
+	text-align: center;
+	color: #444;
+	font-size: 36rpx;
+}
+

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/question/question",
+    "pages/guide/guide",
+    "pages/goodContent/goodContent",
+    "pages/result/result",
+    "pages/buy/buy",
+    "pages/order/order",
+    "pages/orderList/orderList",
+    "pages/user-info/user-info"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "品栋好人"
+  },
+  "tabBar": {
+    "textColor": "#444444",
+    "selectedColor": "#c21d19",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/home.png",
+        "activeIcon": "static/home-active.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "name": "分类",
+        "icon": "static/list.png",
+        "activeIcon": "static/list-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "name": "我的",
+        "icon": "static/user.png",
+        "activeIcon": "static/user-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

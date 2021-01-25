@@ -1,0 +1,23 @@
+
+.history-box{
+		text-align: center;
+		width:23% ;
+}
+.history-img{
+		width: 60rpx;
+		height: 60rpx;
+}
+.history-text{
+		font-size: 28rpx;
+		color: #333;
+		margin: 10rpx 0;
+}
+.history{
+		padding: 30rpx;	
+		display: -webkit-box;	
+		display: -webkit-flex;	
+		display: flex;
+		width: 100%;
+}
+	
+

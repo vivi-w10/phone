@@ -1,0 +1,64 @@
+
+.nav.data-v-39e1dff8 {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		width: 100%;
+}
+.nav-left.data-v-39e1dff8 {
+		width: 30%;
+		height: 100%;
+}
+.nav-left-item.data-v-39e1dff8 {
+		height: 140rpx;
+		font-size: 14px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		padding: 0 30rpx;
+}
+.brand.data-v-39e1dff8{
+		width:80rpx;
+		height: 50px;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		text-align: left;
+}
+.brand-img.data-v-39e1dff8{
+	width: 100%;
+	height: 50rpx;
+}
+.nav-right.data-v-39e1dff8 {
+		width: 70%;
+		height: 100%;
+}
+.nav-right-item.data-v-39e1dff8 {
+		width: 28%;
+		height: 100px;
+		float: left;
+		text-align: center;
+		padding: 5px;
+		font-size: 13px;
+}
+.nav-right-item image.data-v-39e1dff8 {
+		width: 50px;
+		height: 50px;
+}
+.active.data-v-39e1dff8 {
+		color: #F24544;
+}
+.padding.data-v-39e1dff8 {
+		height: 25px;
+		width: 100%;
+		top: 0;
+		position: fixed;
+		background-color: #F24544;
+}
+

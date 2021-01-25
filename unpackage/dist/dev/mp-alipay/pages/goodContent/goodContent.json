@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "产品详情页",
+  "pullRefresh": false,
+  "usingComponents": {
+    "echone-sku": "/components/echone-sku/echone-sku"
+  }
+}

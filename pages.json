@@ -1,0 +1,157 @@
+
+{
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationStyle" : "custom",
+                "navigationBarTitleText" : "首页",
+                "navigationBarTextStyle" : "white"
+            }
+        },
+        {
+            "path" : "pages/list/list",
+            "style" : {
+                "navigationStyle" : "custom",
+                "navigationBarTitleText" : "分类",
+                "enablePullDownRefresh" : false
+            }
+        },
+        {
+            "path" : "pages/user/user",
+            "style" : {
+                "navigationStyle" : "custom",
+                "navigationBarTitleText" : "我的",
+                "enablePullDownRefresh" : false
+            }
+        },
+        {
+            "path" : "pages/search/search",
+            "style" : {
+                "navigationBarTitleText" : "搜索",
+                "enablePullDownRefresh" : false,
+				 "navigationStyle" : "custom"
+            }
+        }
+        ,{
+            "path" : "pages/question/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "常见问题",
+                "enablePullDownRefresh": false,
+				 "navigationStyle" : "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/guide/guide",
+            "style" : {
+				 "navigationBarTitleText": "首页",
+				"navigationStyle" : "custom"
+			}
+        }
+        ,{
+            "path" : "pages/goodContent/goodContent",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "产品详情页",
+                "enablePullDownRefresh": false,
+				"navigationStyle" : "custom"
+				 
+            }
+            
+        }
+        ,{
+            "path" : "pages/result/result",
+            "style" :                                                                                    
+            {
+				"navigationStyle" : "custom",
+                "navigationBarTitleText": "首页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/buy/buy",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "下单",
+                "enablePullDownRefresh": false,
+        		 "navigationStyle" : "custom"
+            }
+            
+        },{
+            "path" : "pages/order/order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情页",
+                "enablePullDownRefresh": false,
+				"navigationStyle" : "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/orderList/orderList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单列表",
+                "enablePullDownRefresh": false,
+				"navigationStyle" : "custom"
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/user-info/user-info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle" : "custom"
+            }
+            
+        }
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "white",
+        "navigationBarTitleText" : "品栋好人"
+    },
+    "tabBar" : {
+        "color" : "#444444",
+        "selectedColor" : "#c21d19",
+        "borderStyle" : "black",
+        "backgroundColor" : "#ffffff",
+        "list" : [
+            {
+                "pagePath" : "pages/index/index",
+                "iconPath" : "static/home.png",
+                "selectedIconPath" : "static/home-active.png",
+                "text" : "首页"
+            },
+            {
+                "pagePath" : "pages/list/list",
+                "iconPath" : "static/list.png",
+                "selectedIconPath" : "static/list-active.png",
+                "text" : "分类"
+            },
+            {
+                "pagePath" : "pages/user/user",
+                "iconPath" : "static/user.png",
+                "selectedIconPath" : "static/user-active.png",
+                "text" : "我的"
+            }
+        ]
+    },
+    "condition" : {
+        //模式配置，仅开发期间生效
+        "current" : 0, //当前激活的模式(list 的索引项)
+        "list" : [
+            {
+                "name" : "", //模式名称
+                "path" : "", //启动页面，必选
+                "query" : "" //启动参数，在页面的onLoad函数里面得到
+            }
+        ]
+    }
+}

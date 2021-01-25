@@ -1,0 +1,144 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<title>
+	宁夏气传花粉致过敏性鼻炎网络直报系统</title>
+<meta charset="utf-8">
+<script src="./js/importJs.js"></script>
+<script type="text/javascript">
+importCss(['/mobile/css/swiper.min.css'])
+importJs(['/mobile/js/swiper/swiper.min.js'])
+importJs(parseHTMLJS);
+
+var myApp = angular.module("myApp", ['base','mobileDirective']);
+myApp.controller("myHomeCtrl",['$scope','baseService','$sce','$compile', function(scope,baseService,$sce,$compile) {
+	$("a.item-inner").click(function(){
+		$.closePanel()
+	});
+	window.onload = function(){
+		scope.loadIndexHtml();
+		$(document).on("click", ".tab-link.button", function(e) {
+		    var b = $(e.target);
+		    b.parent().find(".active").removeClass("active");
+		    b.addClass("active");
+		    var c = $(b.attr("href"));
+		    c.parent().parent().find(".active").removeClass("active");
+		    c.addClass("active");
+		});
+	};
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  decodeURI(r[2]); return null;
+	}
+
+	scope.loadIndexHtml = function(callback){
+		debugger;
+		var account= getQueryString("account");
+		console.log(account);
+		var url = __ctx + "/mobile/home"
+		if(account!=null){
+			url=__ctx + "/mobile/home?account="+account;
+		}
+		$.get(url, function(data){
+			  if(data.result){
+				  $(".index-page").html(data.html);
+				  me.parser();
+				  setTimeout(function(){
+					 $compile($(".index-page")[0])(scope);
+					 $.init();
+					 if(callback){
+						callback();
+					 }
+		          },500)
+			  }
+		});
+	}
+	scope.toWork = function(){
+		window.location.href=__ctx+"/mobile/view/work/work.html";
+	}
+}]);
+
+myApp.directive('htMobileBanner', function() {  
+	return {
+		restrict : 'AE',
+    	scope:{
+    		htOpinionStatus:"="
+    	},
+		link : function(scope, element, attr, ctrl) {
+			var bannerSwiper = new Swiper($(element), {
+		        autoplay: 3000,
+		        visibilityFullFit: true,
+		        loop: true,
+		        allowTouchMove:true,
+		        longSwipesRatio:0.1,
+		        touchAngle:80,
+		        pagination: {
+		            el: '.banner .pagination',
+		        },
+		        navigation: {
+		            nextEl: '.swiper-button-next',
+		            prevEl: '.swiper-button-prev',
+		        }
+		    });
+		}
+	};
+})
+.directive('htMobileTabs', function() {  
+	return {
+		restrict : 'AE',
+    	scope:{
+    		htOpinionStatus:"="
+    	},
+		link : function(scope, element, attr, ctrl) {
+			var tabsSwiper = new Swiper($('#tabs-container',$(element)), {
+		        speed: 500,
+		        observer:true,
+		        observeParents:true,
+		        on: {
+		            slideChangeTransitionStart: function() {
+		                $(".tabs .active",$(element)).removeClass('active');
+		                $(".tabs a",$(element)).eq(this.activeIndex).addClass('active');
+		            }
+		        }
+		    })
+		    $(".tabs a",$(element)).on('click', function(e) {
+		        e.preventDefault()
+		        $(".tabs .active",$(element)).removeClass('active')
+		        $(this).addClass('active')
+		        tabsSwiper.slideTo($(this).index())
+		    })
+		}
+	};
+})
+</script>
+</head>
+<body ng-controller="myHomeCtrl" class="page b-gray">
+	<div class="content">
+		<div class="index-page">
+		</div>
+	</div>
+	<div class="web_foot clearfix">
+		<div class="web_foot_cell current" style="width:50%">
+			<span class="iconfont foot_cell_icon">&#xe64e;</span>
+			<span class="foot_cell_word">首页</span>
+		</div>
+		<div class="web_foot_cell" ng-click="toWork()" style="width:50%">
+			<span class="iconfont foot_cell_icon">&#xe68e;</span>
+			<span class="foot_cell_word">工作台</span>
+		</div>
+		<!-- <div class="web_foot_cell">
+			<span class="iconfont foot_cell_icon">&#xe672;</span>
+			<span class="foot_cell_word">消息</span>
+		</div>
+		<div class="web_foot_cell">
+			<span class="iconfont foot_cell_icon">&#xe761;</span>
+			<span class="foot_cell_word">通讯录</span>
+		</div>
+		<div class="web_foot_cell">
+			<span class="iconfont foot_cell_icon">&#xe501;</span>
+			<span class="foot_cell_word">我的</span>
+		</div> -->
+	</div>
+</body>
+</html>

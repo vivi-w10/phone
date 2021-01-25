@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "分类",
+  "pullRefresh": false,
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "zzx-tabs": "/components/zzx-tabs/zzx-tabs",
+    "category": "/components/qiyue-category/qiyue-category"
+  }
+}

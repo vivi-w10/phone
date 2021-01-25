@@ -1,0 +1,1 @@
+.banner{text-align:center;width:750rpx}.banner-info{width:710rpx;height:340rpx}.recycl-list{margin:40rpx 30rpx;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.recycl-list-title{font-weight:700;color:#444}.more{color:#fac2a1}
